@@ -8,7 +8,7 @@ DerivedData/
 
 ## Various settings
 *.pbxuser
-!default.pbxuser
+!default.pbxuser/Users/xywy/Desktop/code/gitcode/swiftBook/.gitignore
 *.mode1v3
 !default.mode1v3
 *.mode2v3
