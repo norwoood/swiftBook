@@ -20,13 +20,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-    
-        createPersistent { (container) in
+     
+        
+        createPersistent {  (container) in
             
             self.persistentContainer = container
-        
-        
+
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            guard let vc = storyBoard.instantiateViewController(withIdentifier: "RootViewController") as? RootViewController else {
+                fatalError("root vc can't be nil")
+                
+            }
+            
+            vc.managedObjectContext = container.viewContext
+            
+            self.window?.rootViewController = vc
         }
+        
         
         
         return true

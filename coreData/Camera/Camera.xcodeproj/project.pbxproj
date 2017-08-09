@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4039EA1D1F3AE1B4009FBD56 /* Camera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4039EA1B1F3AE1B4009FBD56 /* Camera.xcdatamodeld */; };
+		4039EA231F3AEA46009FBD56 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039EA221F3AEA46009FBD56 /* NSManagedObjectContext+Extensions.swift */; };
+		4039EA261F3AFE04009FBD56 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039EA251F3AFE04009FBD56 /* RootViewController.swift */; };
+		4039EA291F3B0266009FBD56 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039EA281F3B0266009FBD56 /* SegueHandler.swift */; };
+		4039EA2B1F3B16B1009FBD56 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039EA2A1F3B16B1009FBD56 /* CameraViewController.swift */; };
+		4039EA2D1F3B16C6009FBD56 /* CameraContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039EA2C1F3B16C6009FBD56 /* CameraContainerViewController.swift */; };
 		403B60811F39902300CB0857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B60801F39902300CB0857 /* AppDelegate.swift */; };
 		403B60831F39902300CB0857 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B60821F39902300CB0857 /* ViewController.swift */; };
 		403B60861F39902300CB0857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403B60841F39902300CB0857 /* Main.storyboard */; };
@@ -58,6 +63,11 @@
 
 /* Begin PBXFileReference section */
 		4039EA1C1F3AE1B4009FBD56 /* Camera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Camera.xcdatamodel; sourceTree = "<group>"; };
+		4039EA221F3AEA46009FBD56 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		4039EA251F3AFE04009FBD56 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4039EA281F3B0266009FBD56 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		4039EA2A1F3B16B1009FBD56 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		4039EA2C1F3B16C6009FBD56 /* CameraContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraContainerViewController.swift; sourceTree = "<group>"; };
 		403B607D1F39902300CB0857 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403B60801F39902300CB0857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		403B60821F39902300CB0857 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4039EA241F3AFDAD009FBD56 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4039EA2A1F3B16B1009FBD56 /* CameraViewController.swift */,
+				4039EA2C1F3B16C6009FBD56 /* CameraContainerViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4039EA271F3B0257009FBD56 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4039EA281F3B0266009FBD56 /* SegueHandler.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		403B60741F39902300CB0857 = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +153,11 @@
 		403B607F1F39902300CB0857 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				4039EA271F3B0257009FBD56 /* Protocol */,
+				4039EA241F3AFDAD009FBD56 /* ViewController */,
 				403B60801F39902300CB0857 /* AppDelegate.swift */,
 				403B60821F39902300CB0857 /* ViewController.swift */,
+				4039EA251F3AFE04009FBD56 /* RootViewController.swift */,
 				403B60841F39902300CB0857 /* Main.storyboard */,
 				403B60871F39902300CB0857 /* Assets.xcassets */,
 				403B60891F39902300CB0857 /* LaunchScreen.storyboard */,
@@ -154,6 +184,7 @@
 				403B611D1F39B41700CB0857 /* CoreDataHelper.h */,
 				403B611E1F39B41700CB0857 /* Info.plist */,
 				403B617D1F39B8C300CB0857 /* Managed.swift */,
+				4039EA221F3AEA46009FBD56 /* NSManagedObjectContext+Extensions.swift */,
 			);
 			path = CoreDataHelper;
 			sourceTree = "<group>";
@@ -316,8 +347,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				403B60831F39902300CB0857 /* ViewController.swift in Sources */,
+				4039EA291F3B0266009FBD56 /* SegueHandler.swift in Sources */,
 				4039EA1D1F3AE1B4009FBD56 /* Camera.xcdatamodeld in Sources */,
+				4039EA2D1F3B16C6009FBD56 /* CameraContainerViewController.swift in Sources */,
+				4039EA261F3AFE04009FBD56 /* RootViewController.swift in Sources */,
 				403B60811F39902300CB0857 /* AppDelegate.swift in Sources */,
+				4039EA2B1F3B16B1009FBD56 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				403B617E1F39B8C300CB0857 /* Managed.swift in Sources */,
+				4039EA231F3AEA46009FBD56 /* NSManagedObjectContext+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

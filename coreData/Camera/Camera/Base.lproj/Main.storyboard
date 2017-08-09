@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,8 +25,105 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="98" y="-370"/>
+        </scene>
+        <!--RootViewController-->
+        <scene sceneID="Bs6-3L-PVy">
+            <objects>
+                <viewController storyboardIdentifier="RootViewController" id="DGR-TZ-NUH" userLabel="RootViewController" customClass="RootViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c1B-Zy-yyc"/>
+                        <viewControllerLayoutGuide type="bottom" id="bGd-OA-iMw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A34-V6-Sbv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-vi-FqE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="436"/>
+                                <connections>
+                                    <segue destination="BS0-LN-zwD" kind="embed" identifier="embedCameraContainerViewController" id="TTp-BG-doY"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3r-mY-6i5">
+                                <rect key="frame" x="0.0" y="456" width="375" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J3r-mY-6i5" secondAttribute="height" multiplier="16:9" id="aTP-dz-Opg"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="CLl-I5-8d6" kind="embed" identifier="embedCameraViewController" id="tFP-8y-46T"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J3r-mY-6i5" firstAttribute="top" secondItem="Kb1-vi-FqE" secondAttribute="bottom" id="Fhs-nZ-fe4"/>
+                            <constraint firstAttribute="trailing" secondItem="Kb1-vi-FqE" secondAttribute="trailing" id="Lt7-dH-caN"/>
+                            <constraint firstAttribute="trailing" secondItem="J3r-mY-6i5" secondAttribute="trailing" id="VuX-F5-GoW"/>
+                            <constraint firstItem="bGd-OA-iMw" firstAttribute="top" secondItem="J3r-mY-6i5" secondAttribute="bottom" id="XtI-Tl-NP2"/>
+                            <constraint firstItem="Kb1-vi-FqE" firstAttribute="leading" secondItem="A34-V6-Sbv" secondAttribute="leading" id="jT8-dO-Za5"/>
+                            <constraint firstItem="Kb1-vi-FqE" firstAttribute="top" secondItem="c1B-Zy-yyc" secondAttribute="bottom" id="mSR-dg-KrE"/>
+                            <constraint firstItem="J3r-mY-6i5" firstAttribute="leading" secondItem="A34-V6-Sbv" secondAttribute="leading" id="ve8-pp-eKC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivA-mv-rXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="490"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oIU-oS-0pl">
+            <objects>
+                <navigationController id="BS0-LN-zwD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ttd-Va-Dgo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TGK-WQ-Bs0" kind="relationship" relationship="rootViewController" id="V3m-KZ-k9H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8E-Tj-qya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1305" y="489"/>
+        </scene>
+        <!--Camera Container View Controller-->
+        <scene sceneID="Cje-ox-fwW">
+            <objects>
+                <viewController id="TGK-WQ-Bs0" customClass="CameraContainerViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ucR-Bx-bGl"/>
+                        <viewControllerLayoutGuide type="bottom" id="SnT-vg-ZMr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qCA-V6-Ev9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="G15-Vq-aBT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWc-gq-hsy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2113" y="488"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="8fM-wU-vty">
+            <objects>
+                <viewController id="CLl-I5-8d6" customClass="CameraViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wVd-FP-U06"/>
+                        <viewControllerLayoutGuide type="bottom" id="gDi-ew-4rF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G6x-bT-cVF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SyT-ey-Xap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="997"/>
         </scene>
     </scenes>
 </document>
