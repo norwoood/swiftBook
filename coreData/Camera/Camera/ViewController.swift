@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let request = Camera.sortedFetchRequest
-        //request.fetchBatchSize = 20
+        let request = Camera.sortedFetchRequest
+        request.fetchBatchSize = 20
         
     }
 
