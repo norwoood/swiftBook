@@ -21,7 +21,8 @@
 		403B617A1F39B68100CB0857 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B61791F39B68100CB0857 /* Camera.swift */; };
 		403B617C1F39B6D400CB0857 /* CameraStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B617B1F39B6D400CB0857 /* CameraStack.swift */; };
 		403B617E1F39B8C300CB0857 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B617D1F39B8C300CB0857 /* Managed.swift */; };
-		403B61811F39BEDE00CB0857 /* Camera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 403B617F1F39BEDE00CB0857 /* Camera.xcdatamodeld */; };
+		F7465B6A1F39DC8D003595A6 /* Camera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7465B681F39DC8D003595A6 /* Camera.xcdatamodeld */; };
+		F7465B6D1F39DE80003595A6 /* TableViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7465B6C1F39DE80003595A6 /* TableViewDataSourse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +74,8 @@
 		403B61791F39B68100CB0857 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		403B617B1F39B6D400CB0857 /* CameraStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraStack.swift; sourceTree = "<group>"; };
 		403B617D1F39B8C300CB0857 /* Managed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
-		403B61801F39BEDE00CB0857 /* Camera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Camera.xcdatamodel; sourceTree = "<group>"; };
+		F7465B691F39DC8D003595A6 /* Camera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Camera.xcdatamodel; sourceTree = "<group>"; };
+		F7465B6C1F39DE80003595A6 /* TableViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		403B607F1F39902300CB0857 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				F7465B6B1F39DE57003595A6 /* Datasourse */,
 				403B60801F39902300CB0857 /* AppDelegate.swift */,
 				403B60821F39902300CB0857 /* ViewController.swift */,
 				403B60841F39902300CB0857 /* Main.storyboard */,
@@ -143,7 +146,7 @@
 				403B610A1F39B3C800CB0857 /* Info.plist */,
 				403B61791F39B68100CB0857 /* Camera.swift */,
 				403B617B1F39B6D400CB0857 /* CameraStack.swift */,
-				403B617F1F39BEDE00CB0857 /* Camera.xcdatamodeld */,
+				F7465B681F39DC8D003595A6 /* Camera.xcdatamodeld */,
 			);
 			path = CameraModel;
 			sourceTree = "<group>";
@@ -156,6 +159,14 @@
 				403B617D1F39B8C300CB0857 /* Managed.swift */,
 			);
 			path = CoreDataHelper;
+			sourceTree = "<group>";
+		};
+		F7465B6B1F39DE57003595A6 /* Datasourse */ = {
+			isa = PBXGroup;
+			children = (
+				F7465B6C1F39DE80003595A6 /* TableViewDataSourse.swift */,
+			);
+			path = Datasourse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 			files = (
 				403B60831F39902300CB0857 /* ViewController.swift in Sources */,
 				403B60811F39902300CB0857 /* AppDelegate.swift in Sources */,
+				F7465B6D1F39DE80003595A6 /* TableViewDataSourse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				403B617C1F39B6D400CB0857 /* CameraStack.swift in Sources */,
-				403B61811F39BEDE00CB0857 /* Camera.xcdatamodeld in Sources */,
+				F7465B6A1F39DC8D003595A6 /* Camera.xcdatamodeld in Sources */,
 				403B617A1F39B68100CB0857 /* Camera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,12 +640,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		403B617F1F39BEDE00CB0857 /* Camera.xcdatamodeld */ = {
+		F7465B681F39DC8D003595A6 /* Camera.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				403B61801F39BEDE00CB0857 /* Camera.xcdatamodel */,
+				F7465B691F39DC8D003595A6 /* Camera.xcdatamodel */,
 			);
-			currentVersion = 403B61801F39BEDE00CB0857 /* Camera.xcdatamodel */;
+			currentVersion = F7465B691F39DC8D003595A6 /* Camera.xcdatamodel */;
 			path = Camera.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
