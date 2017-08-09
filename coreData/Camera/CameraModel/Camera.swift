@@ -12,8 +12,8 @@ import CoreDataHelper
 
 public class Camera: NSManagedObject {
 
-    @NSManaged fileprivate(set) var date: Date
-    @NSManaged fileprivate(set) var colors: [UIColor]
+    @NSManaged public var date: Date
+    @NSManaged public fileprivate(set) var colors: [UIColor]
     
 }
 
@@ -25,6 +25,20 @@ extension Camera: Managed{
         return [NSSortDescriptor(key: #keyPath(date), ascending: false)]
         
     }
+    
+}
+
+
+extension Camera {
+    
+    public static func insert(into: NSManagedObjectContext, image: UIImage) -> Camera{
+        
+        let camera: Camera = into.insertObject()
+        camera.date = Date()
+        //camera.colors = image.colors
+        return camera
+    }
+    
     
 }
 
